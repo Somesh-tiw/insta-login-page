@@ -17,11 +17,12 @@
 .container{
     height: 90vh;
     width: 90vw;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     /* border: 2px solid; */
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 }
 .box1,.box2,.box3{
     height: 80vh;
@@ -31,12 +32,13 @@
     left: 0;
     /* background-color: blueviolet; */
     /* border: 2px solid; */
-    padding-inline: 180px;
+    padding-inline: 220px;
+     /* padding-left: 50px;  */
 }
 .Image_bar{
     position: absolute;
     top: 5%;
-    left: 55%;
+    left: 62%;
     
     /* bottom: 613px;
     left: 155px;
@@ -62,6 +64,10 @@
    margin-bottom: 11px;
     
 }
+.insta{
+    font-size: 40px;
+    font-weight: 900;
+}
 .input_div1 input{
     padding: 20px;
      width: 25vw;  
@@ -85,7 +91,7 @@
 .input_div2 input:focus{
     outline: #3a2fce;
 }
-.input_div1 input:focus{
+.input_div1 input:focus{ 
     outline: #3a2fce;
 }
 
@@ -129,13 +135,13 @@ p{
     text-decoration: none;
 }
 .box1{
-    animation: slide1  15s linear infinite;
+    animation: slide1  5s linear infinite;
 }
 .box2{
-    animation: slide2  15s linear infinite;
+    animation: slide2  5s linear infinite;
 }
 .box3{
-    animation: slide3  15s linear infinite;
+    animation: slide3  5s linear infinite;
 }
 @keyframes slide1{
     0%{visibility: visible;}
@@ -160,4 +166,136 @@ p{
     75%{visibility: visible;}
     100%{visibility: hidden;}
     
+}
+.text11{
+    color: black;
+}
+/* Responsive site */
+/* Responsive for screen width 480px and below */
+/* Responsive for screen width 481px to 780px */
+@media screen and (min-width: 481px) and (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .box1, .box2, .box3 {
+        display: none; /* Optional: You can keep only 1 image if needed */
+    }
+
+    .box4 {
+        width: 80vw;
+        height: auto;
+        padding: 30px 20px;
+        right: 0;
+        top: 0;
+        position: static;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .input_div1 input,
+    .input_div2 input,
+    button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .input_div1 input,
+    .input_div2 input {
+       width: 400px;
+    }
+
+    button {
+       width: 400px;
+    }
+
+    .icon {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+        color: #4267B2;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .janu {
+        width: 150px;
+        height: 45px;
+        background-size: cover;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box1, .box2, .box3 {
+        display: none;
+    }
+
+    .box4 {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        right: 0;
+        top: 0;
+        position: static;
+    }
+
+    .input_div1 input,
+    .input_div2 input,
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .input_div1 input,
+    .input_div2 input {
+        width: 400px;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 400px;
+    }
+
+    .icon {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin: 0;
+        color: #4267B2;
+    }
+
+    p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .janu {
+        background-size: 140px;
+        width: 140px;
+        height: 40px;
+    }
 }
